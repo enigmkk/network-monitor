@@ -1,0 +1,5 @@
+{
+  "name": "Astra.NetworkMonitor.Android",
+  "references": ["Astra.NetworkMonitor.Runtime"],
+  "includePlatforms": ["Android"]
+}

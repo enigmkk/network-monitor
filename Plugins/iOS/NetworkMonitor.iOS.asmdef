@@ -1,0 +1,19 @@
+{
+    "name": "Astra.NetworkMonitor.iOS",
+    "rootNamespace": "",
+    "references": [
+        "Astra.NetworkMonitor.Runtime"
+    ],
+    "includePlatforms": [
+        "Editor",
+        "iOS"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
