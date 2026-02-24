@@ -1,17 +1,15 @@
 package com.astra.network;
 
-import com.unity3d.player.UnityPlayer;
-
-import com.astra.network.INetworkCallback;
+import android.content.Context;
 
 public class NetworkCallbackBridge
 {
     private static INetworkCallback m_callback;
-    public static void start(INetworkCallback callback)
+    public static void start(Context context, INetworkCallback callback)
     {
         m_callback = callback;
         NetworkMonitor.start(
-            UnityPlayer.currentActivity.getApplicationContext(),
+            context.getApplicationContext(),
             status -> OnNativeChanged(status)
         );
     }
