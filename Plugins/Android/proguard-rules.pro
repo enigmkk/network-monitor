@@ -1,1 +1,1 @@
--keep class com.astra.foundation.** { *; }
+-keep class com.astra.network.** { *; }
