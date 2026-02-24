@@ -9,8 +9,12 @@ namespace Astra.Network
         public override void Init()
         {
             var callbackProxy = new NetworkMonitorAndroidBridge();
-            AndroidJavaClass _bridge = new AndroidJavaClass("com.astra.network.NetworkCallbackBridge");
-            _bridge.CallStatic("start", callbackProxy);
+            using (var unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
+            {
+                var activity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
+                AndroidJavaClass _bridge = new AndroidJavaClass("com.astra.network.NetworkCallbackBridge");
+                _bridge.CallStatic("start", activity, callbackProxy);
+            }
         }
     }
 }
